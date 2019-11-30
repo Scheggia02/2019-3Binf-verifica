@@ -6,5 +6,5 @@ app = Flask("Marconi")
 
 @app.route("/")
 def data_book():
-    return json.dumps([book for book in catalog])
+    return json.dumps([book.__dict__ for book in catalog])
 

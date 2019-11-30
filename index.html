@@ -16,6 +16,12 @@
     // Prende i dati come JSON dall'URL
     // quando ha finito di prendere i dati, chiama la funzione "makeList"
     $.getJSON("http://127.0.0.1:5000/").done(makeList);
+    function makeList(jsonBooks) {
+        for (book of jsonBooks) {
+            let newItem = `<li>${book}</li>`;
+            $("ul").append(newItem);
+        }
+    }
 </script>
 
 </html>
