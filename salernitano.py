@@ -6,4 +6,3 @@ catalog = [book_01, book_02]
 
 def get_books_list():
     return catalog
- 
